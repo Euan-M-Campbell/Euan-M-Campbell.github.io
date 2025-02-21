@@ -1,0 +1,18 @@
+
+#grid-container {
+    display: grid;
+    border: 1px solid #000;
+    height: 300px;
+    width: 300px;
+    background-color: black;
+}
+
+.cell {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+}
+
+.cell.alive {
+    background-color: green;
+}
