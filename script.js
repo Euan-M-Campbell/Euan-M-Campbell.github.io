@@ -1,25 +1,27 @@
-// Function to show the tab content
+// Function to handle tab switching and active tab styling
 function showTab(tabId) {
-    // Hide all tab contents
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(content => content.classList.remove('active'));
+    // Remove 'active' class from all tabs
+    const tabs = document.querySelectorAll('.tab-bar a');
+    tabs.forEach(tab => tab.classList.remove('active'));
   
-    // Remove 'active' class from all tab links
-    const tabLinks = document.querySelectorAll('.tab-bar li a');
-    tabLinks.forEach(link => link.classList.remove('active'));
-  
-    // Show the selected tab
-    const activeTab = document.getElementById(tabId);
-    activeTab.classList.add('active');
-  
-    // Add 'active' class to the clicked tab link using data-tab attribute
-    const activeLink = document.querySelector(`.tab-bar li a[data-tab="${tabId}"]`);
-    if (activeLink) {
-      activeLink.classList.add('active');
+    // Add 'active' class to the clicked tab
+    const activeTab = document.querySelector(`.tab-bar a[data-tab="${tabId}"]`);
+    if (activeTab) {
+      activeTab.classList.add('active');
     }
-}
   
-// Set default tab to 'Summary'
-document.addEventListener('DOMContentLoaded', () => {
+    // Hide all content sections
+    const sections = document.querySelectorAll('.tab-content');
+    sections.forEach(section => section.style.display = 'none');
+  
+    // Show the selected tab's content
+    const selectedSection = document.getElementById(tabId);
+    if (selectedSection) {
+      selectedSection.style.display = 'block';
+    }
+  }
+  
+  // Set 'Summary' as the default active tab on page load
+  document.addEventListener('DOMContentLoaded', function() {
     showTab('summary');
-});
+  });
