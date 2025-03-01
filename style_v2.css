@@ -228,3 +228,66 @@ body {
     width: 95vw;
     border-bottom: 2px solid grey;
 }
+
+#mobile-view {
+    display: none; /* Hide by default */
+}
+
+/* Add this CSS to your style_v2.css file */
+
+/* Hide elements when the screen width is below 768px (common mobile breakpoint) */
+@media only screen and (max-width: 768px) {
+    #page-head,
+    #page-content,
+    #tab-head {
+        display: none;
+    }
+
+    /* Add styles for the elements you want to show in mobile view here */
+    #mobile-view {
+        display: block;
+    }
+}
+
+#mobile-content-container {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 8px;
+}
+
+#mobile-name {
+    font-family: 'Source Code Pro', monospace;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#mobile-title {
+    font-family: 'Source Code Pro', monospace;
+    white-space: nowrap;
+    color: grey;
+    margin: 0;
+}
+
+#mobile-bottom-text {
+    font-family: 'Source Code Pro', monospace;
+    color: grey;
+    position: fixed;
+    bottom: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Ensure text itself is centered */
+}
+
+#mobile-contact-header {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#mobile-divider {
+    height: 2px;
+    width: 100%;
+    background-color: grey;
+    margin: 4px 0;
+}
+
