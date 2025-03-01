@@ -179,11 +179,12 @@ body {
 .tab-title {
     font-family: 'Source Code Pro', monospace;
     margin-top: 8px;
-    cursor: pointer;
+    cursor: default;
 }
 
 #tab-title {
     font-family: 'Source Code Pro', monospace;
+    cursor: default;
 }
 
 .tab-text {
@@ -291,3 +292,6 @@ body {
     margin: 4px 0;
 }
 
+.block-head {
+    cursor: default;
+}
