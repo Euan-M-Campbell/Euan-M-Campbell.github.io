@@ -1,18 +1,18 @@
 
 #grid-container {
     display: grid;
-    border: 1px solid #000;
-    height: 300px;
-    width: 300px;
-    background-color: black;
+    height: 8vh;
+    width: 8vh;
+    background-color: white;
+    overflow: hidden;
 }
 
 .cell {
-    width: 5px;
-    height: 5px;
-    background-color: black;
+    width: 0.4vh;
+    height: 0.4vh;
+    background-color: white;
 }
 
 .cell.alive {
-    background-color: green;
+    background-color: rgb(19, 238, 19);
 }

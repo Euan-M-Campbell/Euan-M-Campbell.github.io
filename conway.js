@@ -3,8 +3,8 @@ const gridContainer = document.getElementById('grid-container');
 let simulationIntervalId = null;
 let resetIntervalId = null;
 
-const rows = 60;
-const cols = 60;
+const rows = 50;
+const cols = 50;
 let grid = createGrid(rows, cols);
 let intervalId = null;
 
@@ -18,8 +18,8 @@ function createGrid(rows, cols) {
 
 function renderGrid(grid) {
     gridContainer.innerHTML = '';
-    gridContainer.style.gridTemplateColumns = `repeat(${cols}, 5px)`;
-    gridContainer.style.gridTemplateRows = `repeat(${rows}, 5px)`;
+    gridContainer.style.gridTemplateColumns = `repeat(${cols}, 0.4vh)`;
+    gridContainer.style.gridTemplateRows = `repeat(${rows}, 0.4vh)`;
 
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
@@ -98,7 +98,7 @@ function startGame() {
     resetIntervalId = setInterval(() => {
         randomizeGrid(grid);
         renderGrid(grid);
-    }, 60000);
+    }, 30000);
 }
 
 function resetGame() {
@@ -109,3 +109,4 @@ function resetGame() {
 }
 
 renderGrid(grid);
+startGame();
