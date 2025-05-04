@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Euan Campbell - Software Dev</title>
+        <title>Euan Campbell</title>
         <link rel="stylesheet" href="style_v2.css">
         <link rel="stylesheet" href="conway_v2.css">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
         <div id="mobile-view">
             <div id="mobile-content-container">
                 <h1 id="mobile-name">Euan McLean Campbell</h2>
-                <h2 id="mobile-title">Software Developer</h2>
+                <h2 id="mobile-title">Data Engineer - Software Developer</h2>
                 <div id="mobile-divider"></div>
                 <b id="mobile-contact-header">Contact</b>
                 <p class="contact-info"><span class="material-icons">mail</span> <a href="mailto:euan.m.campbell@protonmail.com" class="custom-link">euan.m.campbell@protonmail.com</a></p>
@@ -23,6 +23,9 @@
                 <p class="contact-info"><span class="material-icons">link</span> <a href="https://github.com/EMCampbell01" class="custom-link">GitHub</a></p>
                 <p id="mobile-bottom-text">To view my full portfolio, open this page in a desktop browser</p>
             </div>
+        </div>
+        <div id="web-background"> 
+
         </div>
         <div id="page-head">
             <div class="head-container">
@@ -35,174 +38,170 @@
                 </div>
             </div>    
             <div id="nav-bar">
-                <button data-string="education" class="nav-bar-tab-button" id="btn-education" onclick="showTab('education')">Education</button>
-                <button data-string="tech-stack" class="nav-bar-tab-button" id="btn-tech-stack" onclick="showTab('tech-stack')">Tech-Stack</button>
-                <button data-string="experience" class="nav-bar-tab-button" id="btn-experience" onclick="showTab('experience')">Experience</button>
-                <button data-string="projects" class="nav-bar-tab-button" id="btn-portfolio" onclick="showTab('portfolio')">Portfolio</button>
-                <button data-string="contact" class="nav-bar-tab-button" id="btn-contact" onclick="showTab('contact')">Contact</button>
+                <button class="nav-bar-tab-button" id="btn-resume" onclick="showTab('resume')">Resume</button>
+                <button class="nav-bar-tab-button" id="btn-portfolio" onclick="showTab('portfolio')">Portfolio</button>
+                <button class="nav-bar-tab-button" id="btn-contact" onclick="showTab('contact')">Contact</button>
             </div>
-            <button id="lang-button" onclick="changeLang()"><img src="gb.svg" alt="Flag" width="24" height="24"></button>
         </div>
         <div id="tab-head">
             <h3 id="tab-title">Bio</h3>
         </div>
         <div id="page-content">
+
             <div id="bio-tab" class="tab">
                 <h3 style="color: white;">&nbsp;</h3>
-                <p data-string="bio-p-1" class="tab-text">Fourth-year BSc (Hons) Computer Science student at Edinburgh Napier University.</p>
-                <p data-string="bio-p-2" class="tab-text">Experienced in full-stack development, software maintenance, and effective collaboration within development teams. Confident in core development concepts, including algorithms, data structures, and design patterns.</p>
-                <p data-string="bio-p-3" class="tab-text">Passionate about building high-performance, scalable systems by writing clean, maintainable code and adhering to best practices. I am particularly interested in exploring emerging technologies such as artificial intelligence and its applications in solving complex, real-world problems.</p>
-                <p data-string="bio-p-4" class="tab-text">Seeking opportunities to apply my skills and knowledge in a challenging software development role, where I can contribute to innovative projects and continue to grow as a developer.</p>
-                <!-- <p data-string="bio-p-5" class="tab-text"></p> -->
+                <p class="tab-text">Computer Science graduate with a solid foundation in software development and a focus on data engineering. Experienced in building data pipelines, integrating public APIs, and working with cloud platforms such as GCP. Driven to develop efficient, scalable ELT solutions that address complex data challenges.</p>
+                <p class="tab-text">Adept in Python and its ecosystem, including libraries such as NumPy, Pandas, Flask, and Asyncio. Skilled in database design using both relational and NoSQL systems, including SQLite, PostgreSQL, and Cloud Firestore.</p>
             </div>
-            <div id="education-tab" class="tab hidden-tab">
-                <h3 data-string="education" class="tab-title">Education</h3>
-                <div class="tab-subsection">
-                    <b data-string="bsc-computer-science" class="block-head" data-block="napier">BSc (Hons) Computer Science {</b>
-                    <div class="tab-subsection-content">
-                        <p data-string="edinburgh-napier-university" class="no-margin" style="padding-top: 8px;">Edinburgh Napier University</p>
-                        <p class="no-margin">2019 - 2025</p>
-                        <p data-string="napier-grade" class="no-margin">Grade: First-Class (Projected)</p>
-                        <p data-string="napier-p-1" style="margin-top: 8px;">Achieved merit in modules covering a wide array of subjects and technologies in both high-level and low-level areas of computing. Designed, developed and showcased coursework projects including web applications, mobile applications and database systems. Participated in extracurricular events such as annual hackathons.</p>
-                        <p data-string="napier-p-2" style="margin-top: 8px;">Final Year Grades:</p>
-                        <ul class="tab-subsection-list" style="margin: 8px; margin-bottom: 0px;">
-                            <li data-string="module-list-1">73% - Multi-Agent Systems</li>
-                            <li data-string="module-list-2">77% - Software Architecture</li>
-                            <li data-string="module-list-3">TBC - Formal Approaches to Software Engineering</li>
-                            <li data-string="module-list-4">TBC - Computational Intelligence</li>
-                            <li data-string="module-list-5">TBC - Honours Project: "A Comparative Analysis of CPython and Mojo for Performance and Usability."</li>
-                        </ul>
-                    </div>
-                    <b class="block end" data-block="napier" style="cursor: default;">}</b>
-                </div>
-                <div class="tab-subsection">
-                    <b data-string="russian-language-studies" class="block-head">Russian Language Studies {</b>
-                    <div class="tab-subsection-content">
-                        <p data-string="international-house-edinburgh" class="no-margin" style="padding-top: 8px;">International House Edinburgh</p>
-                        <p class="no-margin">2022 - 2023</p>
-                        <p data-string="international-house-grade" class="no-margin">Grade: B2 (CERF)</p>
-                        <p data-string="international-house-p-1" style="margin-top: 8px; margin-bottom: 0px;">Studied Russian language and culture for a year, achieving a B2 level of proficiency in speaking, listening, reading and writing. Completed coursework and exams in grammar, vocabulary, and comprehension. Participated in speaking and listening exercises, and conversational practice with native speakers.</p>
-                    </div>
-                    <b style="cursor: default;">}</b>
-                </div>
-                <div class="tab-subsection">
-                    <b data-string="scottish-highers-nat-5" class="block-head">Scottish Highers and National 5s {</b>
-                    <div class="tab-subsection-content">
-                        <p data-string="scottish-highers" class="no-margin" style="padding-top: 8px;">Inverkeithing High School</p>
-                        <p class="no-margin">2013 - 2019</p>
-                        <p class="no-margin">Grade: BBCC (Higher) ABBBBB (National 5)</p>
-                        <p data-string="scottish-highers-p-1">Developed a keen interest in science, particularly physics, which formed the foundation of my academic journey. These subjects sparked my curiosity and led to a deeper understanding of science, technology and engineering.</p>
-                        <p data-string="subjects">Subjects:</p>
-                        <ul class="tab-subsection-list" style="margin-top: 8px; margin-bottom: 0px;">
-                            <li data-string="subject-list-1">B - Higher Physics</li>
-                            <li data-string="subject-list-2">B - Higher Biology</li>
-                            <li data-string="subject-list-3">C - Higher Mathematics</li>
-                            <li data-string="subject-list-4">C - Higher English</li>
-                            <li data-string="subject-list-5">A - National 5 Religious, Moral and Philosophical Studies</li>
-                            <li data-string="subject-list-6">B - National 5 Chemistry</li>
-                        </ul>
-                    </div>
-                    <b style="cursor: default;">}</b>
-                </div>              
-            </div>
-            <div id="tech-stack-tab" class="tab hidden-tab">
-                <h3 data-string="tech-stack-tab-title" class="tab-title">&nbsp;</h3>
-                <div class="tab-subsection">
-                    <b data-string="tab-subsection-client-side" class="block-head">Client-Side Development {</b>
-                    <div class="tab-subsection-content">
-                        <p data-string="tab-subsection-cliet-side-p-1" class="no-margin" style="padding-top: 8px;">Throughout my academic studies and experience in software development, I have developed a strong skills in client-side web development. I have experience using Javascript, TypeScript, HTML, and CSS within frameworks such as Angular and React to create dynamic single-page web applications. I am confident in core client-side processes such as DOM manipulation, state management, components and optimization, that allow for the development of responsive and data-intensive web applications.</p>
-                        <p style="margin-top: 8px; margin-bottom: 0px;">React, Angular, Javascript, TypeScript, JSX, HTML, CSS</p>
-                    </div>
-                    <b style="cursor: default;">}</b>
-                </div>
-                <div class="tab-subsection">
-                    <b data-string="tab-subsection-server-side" class="block-head">Server-Side Development {</b>
-                    <div class="tab-subsection-content">
-                        <p data-string="tab-subsection-server-side-p-1" class="no-margin" style="padding-top: 8px;">I have hands-on experience in server-side development, having built several three-tiered architecture projects using libraries such as Node.js, Flask, and Django. I possess a solid understanding of core server-side concepts, including REST API design, authentication, middleware integration, and server optimization. My projects have involved creating scalable and secure backend systems to support dynamic web applications, ensuring efficient data handling and seamless communication between the client and database layers.</p>
-                        <p style="margin-top: 8px; margin-bottom: 0px;">Flask, Django, Node.js, Python, Javascript</p>
-                    </div>
-                    <b style="cursor: default;">}</b>  
-                </div>
-                <div class="tab-subsection">
-                    <b data-string="tab-subsection-database" class="block-head">Database Management {</b>
-                    <div class="tab-subsection-content">
-                        <p data-string="tab-subsection-database-p-1" class="no-margin" style="padding-top: 8px;">I have worked with both relational and NoSQL databases, including SQLite, PostgreSQL, and Firestore. My experience includes designing and implementing database schemas, writing complex queries, and optimizing database performance for applications. I understand the strengths and use cases of relational (e.g., tables, joins, normalization) and document-based databases (e.g., collections, nested data structures), allowing me to choose the appropriate database system based on project requirements.</p>
-                        <p style="margin-top: 8px; margin-bottom: 0px;">SQLite, PostGreSQL, MongoDB, Firestore, SQL, JSON</p>
-                    </div>
-                    <b style="cursor: default;">}</b>
-                </div>
-                <div class="tab-subsection">
-                    <b data-string="tab-subsection-tools" class="block-head">Tools & Platforms {</b>
-                    <div class="tab-subsection-content">
-                        <p data-string="tab-subsection-tools-p-1" class="no-margin" style="padding-top: 8px;">I am proficient in using Git for version control, with experience contributing to enterprise-level software projects using TortoiseGit. Additionally, I have explored cloud platforms such as AWS and Google Cloud, deploying applications using Google Cloud App Engine with Lambda functions. I also have experience with containerization tools like Docker, enabling consistent deployment environments, and have worked with virtual machines and WSL (Windows Subsystem for Linux) to develop and test applications in Ubuntu. My familiarity with these tools and platforms allows me to effectively manage development workflows and deploy scalable, cloud-based solutions.</p>
-                        <p style="margin-top: 8px; margin-bottom: 0px;">Git, Git Bash, Bash, TortoiseGit, Docker, Google Cloud, AWS, WSL, Ubuntu</p>
-                    </div>
-                    <b style="cursor: default;">}</b>
-                </div>         
-            </div>
-            <div id="experience-tab" class="tab hidden-tab">
-                <h3 data-string="experience" class="tab-title">&nbsp;</h3>
-                <div class="tab-subsection">
-                    <b data-string="tab-subsection-title-r&d-intern" class="block-head">R&D Intern {</b>
-                    <div class="tab-subsection-content">
-                        <p class="no-margin" style="padding-top: 8px;">SAS</p>
-                        <p data-string="tab-subsection-r&d-p-1" class="no-margin">June 2023 - September 2023</p>
-                        <p data-string="tab-subsection-r&d-p-2" style="margin-top: 8px; margin-bottom: 0px;">During my second internship at SAS I rejoined the Search and Network Discovery (SAND) team where I was given responsibility of developing and implementing a new "Saved Searches" feature for the SAS Visual Investigator application. The feature allowed provided users to the functionality to create, save and manage complex search queries including parameters such as text, item attributes and location. The feature was developed using Angular, and over the duration of its development I strengthened my understanding of the Angular Framework and component based client-side web development. Additionally I contributed bug fixes, created documentation, and completed code reviews.</p>
-                    </div>
-                    <b style="cursor: default;">}</b>
-                </div>
-                <div class="tab-subsection">
-                    <b data-string="tab-subsection-title-r&d-intern" class="block-head">R&D Intern {</b>
-                    <div class="tab-subsection-content">
-                        <p class="no-margin" style="padding-top: 8px;">SAS</p>
-                        <p data-string="tab-subsection-r&d-p-3" class="no-margin">June 2022 - September 2022</p>
-                        <p data-string="tab-subsection-r&d-p-4" style="margin-top: 8px; margin-bottom: 0px;">During my first internship as SAS I joined the Search and Network Discovery (SAND) team where I used the Angular Framework to contribute to the SAS Visual Investigator application. During this internship I gained experience working as part of a Scrum team and participating in design meetings. I was tasked with developing a new "System Diagram" feature, to allow Visual Investigator admin users to visualize the components of a system and their relationships in a dynamic node-edge graph.</p>    
-                    </div>
-                    <b style="cursor: default;">}</b>
-                </div>
-            </div>
-            <div id="portfolio-tab" class="tab hidden-tab">
-                <h3 data-string="projects" class="tab-title">&nbsp;</h3>
-                <div id="tab-subsection">
+ 
+            <div id="resume-tab" class="tab hidden-tab">
+                <h3 class="tab-title">Resume</h3>
+                <div id="resume-container">
+
+                    <p>Computer Science graduate with hands-on experience in data engineering and full-stack software development. Skilled in designing scalable data pipelines, integrating APIs, and building performant applications using Python, JavaScript, and cloud platforms like GCP. Demonstrated ability to deliver impactful solutions through academic projects and professional internships. Adept at leveraging modern libraries, frameworks, and databases to solve real-world problems efficiently.</p>
+
                     <div class="tab-subsection">
-                        <b data-string="tab-subsection-title-dissertation" class="block-head">Undergraduate Dissertation Project {</b>
+                        <b class="block-head">Skills</b>
                         <div class="tab-subsection-content">
-                            <p data-string="tab-subsection-dissertation-p-1" class="no-margin" style="padding-top: 8px;  padding-bottom: 8px;">"A Comparative Analysis of CPython and Mojo for Performance and Usability."</p>
-                            <p data-string="tab-subsection-dissertation-p-2" class="no-margin">Developed a comparative analysis of CPython and its superset Mojo, by implementing comparable algorithm implementations and testing key benchmarks. Investigated the different approaches taken in language and compiler design, and their impacts on performance and usability.</p>
-                            <p data-string="tab-subsection-dissertation-p-3" class="no-margin" style="margin-top: 8px;">Algorithm Implementations Compared:</p>
-                            <ul class="tab-subsection-list">
-                                <li data-string="tab-subsection-dissertation-li-1">Matrix Multiplication</li>
-                                <li data-string="tab-subsection-dissertation-li-2">Quick Sort</li>
-                                <li data-string="tab-subsection-dissertation-li-3">A* Pathfinding</li>
-                                <li data-string="tab-subsection-dissertation-li-4">Conway's Game of Life</li>
-                            </ul>
-                            <p data-string="tab-subsection-dissertation-p-4" class="no-margin">Through utilising Mojo's more explicit control over low system resources, excecution time of algorithms was increased by up to 5x over standard CPython.</p>
+
+                            <div style="height: 2px;"></div>
+                            <div class="tab-subsection-item">
+                                <div class="tab-subsection-item-head">
+                                    <p class="no-margin">Programming Languages</p>   
+                                </div>
+                                <div class="tab-subsection-item-body">
+                                    <p class="no-margin">Python, SQL, Bash, JavaScript, TypeScript, HTML, Java</p>    
+                                </div>
+                            </div>
+
+                            <div style="height: 2px;"></div>
+                            <div class="tab-subsection-item">
+                                <div class="tab-subsection-item-head">
+                                    <p class="no-margin">Database Managment Systems</p>   
+                                </div>
+                                <div class="tab-subsection-item-body">
+                                    <p class="no-margin">SQLite, MySQL, PostGreSQL, Firestore, MongoDB</p>    
+                                </div>
+                            </div>
+
+                            <div style="height: 2px;"></div>
+                            <div class="tab-subsection-item">
+                                <div class="tab-subsection-item-head">
+                                    <p class="no-margin">Frameworks & Libraries</p>   
+                                </div>
+                                <div class="tab-subsection-item-body">
+                                    <p class="no-margin">Flask, Angular, React, NodeJS, NumPy, MatplotLib, Pandas, Asyncio</p>    
+                                </div>
+                            </div>
+
+                            <div style="height: 2px;"></div>
+                            <div class="tab-subsection-item">
+                                <div class="tab-subsection-item-head">
+                                    <p class="no-margin">Tools & Technologies</p>   
+                                </div>
+                                <div class="tab-subsection-item-body">
+                                    <p class="no-margin">Git, pip, npm, GitHub, GCP, Jira</p>    
+                                </div>
+                            </div>
+
                         </div>
-                        <b style="cursor: default;">}</b>
                     </div>
+
                     <div class="tab-subsection">
-                        <b data-string="tab-subsection-title-gdi" class="block-head">Global Data Interface Package {</b>
+                        <b class="block-head">Education</b>
                         <div class="tab-subsection-content">
-                            <p data-string="tab-subsection-gdi-p-1" class="no-margin" style="padding-top: 8px; padding-bottom: 8px;">Python package for interfacing with multiple APIs providing international time-series data</p>
+                            <div style="height: 2px;"></div>
+                            <div class="tab-subsection-item">
+                                <div class="tab-subsection-item-head">
+                                    <p class="no-margin">Edinburgh Napier University - BSc (Hons) Computer Science</p>   
+                                </div>
+                                <div class="tab-subsection-item-body">
+                                    <p class="no-margin">September 2019 - July 2025</p>   
+                                    <p class="no-margin" style="padding-top: 5px;">Grade: 2.1 (Expected)</p> 
+                                    <p class="no-margin">Achieved merit in modules while developing a strong foundational knowledge of core computing concepts such as algorithms, data structures, design patterns, big O notation and object-oriented design. Accrued valuable experience working with a diverse array of tools and technologies, transferring key concepts and principles between their use. Developed several capstone projects including full-stack web applications built on three-tiered architecture, utilising both SQL and NoSQL databases to handle structured and unstructured data.</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-subsection">
+                        <b class="block-head">Experience</b>
+                        <div class="tab-subsection-content">
+
+                            <div style="height: 2px;"></div>
+                            <div class="tab-subsection-item">
+                                <div class="tab-subsection-item-head">
+                                    <p class="no-margin">SAS - Software Developer Intern</p>   
+                                </div>
+                                <div class="tab-subsection-item-body">
+                                    <p class="no-margin">June 2023 - September 2023</p>   
+                                    <p class="no-margin" style="padding-top: 5px;">Joined SAS's Search and Network Discovery (SAND) and developed a graph feature for system admins of the SAS Visual Investigator application, using Angular and D3.js to visualize relationships between entities.</p> 
+                                </div>
+                            </div>
+
+                            <div style="height: 2px;"></div>
+                            <div class="tab-subsection-item">
+                                <div class="tab-subsection-item-head">
+                                    <p class="no-margin">SAS - Software Developer Intern</p>
+                                </div>
+                                <div class="tab-subsection-item-body">
+                                    <p class="no-margin">June 2022 - September 2022</p>   
+                                    <p class="no-margin" style="padding-top: 5px;">Joined SAS's Search and Network Discovery (SAND) and developed a graph feature for system admins of the SAS Visual Investigator application, using Angular and D3.js to visualize relationships between entities.</p>  
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="portfolio-tab" class="tab hidden-tab">
+                <h3 class="tab-title">Portfolio</h3>
+                <div id="portfolio-container">
+
+                    <div class="tab-subsection">
+                        <b class="block-head">Undergraduate Dissertation Project</b>
+                        <div class="tab-subsection-content" style="padding-left: 10px;">
+                            <p class="no-margin" style="padding-top: 8px;  padding-bottom: 8px;">"A Comparative Analysis of CPython and Mojo for Performance and Usability."</p>
+                            <p class="no-margin">Developed a comparative analysis of CPython and its superset Mojo, by implementing comparable algorithm implementations and testing key benchmarks. Investigated the different approaches taken in language and compiler design, and their impacts on performance and usability.</p>
+                            <p class="no-margin" style="margin-top: 8px;">Algorithm Implementations Compared:</p>
+                            <ul class="tab-subsection-list">
+                                <li>Random Number Generation</li>
+                                <li>Fibonacci Sequence</li>
+                                <li>Quick Sort</li>
+                                <li>Matrix Multiplication</li>
+                                <li>A*</li>
+                                <li>Conway's Game of Life</li>
+                            </ul>
+                            <p class="no-margin">Through utilising Mojo's more explicit control over low system resources, excecution time of algorithms was increased by up to 5x over standard CPython.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-subsection">
+                        <b class="block-head">Global Data Interface Package</b>
+                        <div class="tab-subsection-content" style="padding-left: 10px;">
+                            <p class="no-margin" style="padding-top: 8px; padding-bottom: 8px;">Python package for interfacing with multiple APIs providing international time-series data</p>
                             <p class="no-margin">Github Repo: Global-Data-Interface</p>
                             <p class="no-margin">Pypi: Global-Data-Interface</p>
-                            <p data-string="tab-subsection-gdi-p-2" class="no-margin" style="padding-top: 8px;">Global Data Interface is a Python package designed to provide a unified interface to easily query for data from a number of APIs providing international time series data. Includes clients for APIs from organizations such as the WB, UN, IMF, and WTO.</p>    
+                            <p class="no-margin" style="padding-top: 8px;">Global Data Interface is a Python package designed to provide a unified interface to easily query for data from a number of APIs providing international time series data. Includes clients for APIs from organizations such as the WB, UN, IMF, and WTO.</p>    
                         </div>
-                        <b style="cursor: default;">}</b>
                     </div>
+
                     <div class="tab-subsection">
-                        <b data-string="tab-subsection-title-mas" class="block-head">Multi-Agent System Framework {</b>
-                        <div class="tab-subsection-content">
-                            <p data-string="tab-subsection-mas-p-1" class="no-margin" style="padding-top: 8px; padding-bottom: 8px;">Framework developed in Python for creating MAS projects.</p>
-                            <p class="no-margin">Github Repo: Multi-Agent-System-Framework</p>
+                        <b class="block-head">Multi-Agent System Framework</b>
+                        <div class="tab-subsection-content" style="padding-left: 10px;">
+                            <p class="no-margin" style="padding-top: 8px;">Framework developed in Python for creating MAS projects.</p>
+                            <p class="no-margin" style="padding-top: 8px;">Github Repo: Multi-Agent-System-Framework</p>
                             <p class="no-margin">Youtube Demo: MAS Demo</p>
-                            <p data-string="tab-subsection-mas-p-2" class="no-margin" style="padding-top: 8px;">The Multi-Agent System Framework provides the building blocks to create a multi-agent system. Enables the creation of multiple agents that interact with each other and a shared environment. Agents act independently, and run asynchronously. Can be used as a foundation for a number of MAS projects.</p>
-                            <p data-string="tab-subsection-mas-p-3" class="no-margin" style="padding-top: 8px;">The demo shows the framework used to create a simulation of Ants collecting food and returning it to a nest. Ants function independently while assisting each other through leaving trails in the environment</p>    
+                            <p class="no-margin" style="padding-top: 8px;">The Multi-Agent System Framework provides the building blocks to create a multi-agent system. Enables the creation of multiple agents that interact with each other and a shared environment. Agents act independently, and run asynchronously. Can be used as a foundation for a number of MAS projects.</p>
+                            <p class="no-margin" style="padding-top: 8px;">The demo shows the framework used to create a simulation of Ants collecting food and returning it to a nest. Ants function independently while assisting each other through leaving trails in the environment</p>    
                         </div>
-                        <b style="cursor: default;">}</b>
                     </div>
+
                 </div>
             </div>
+
             <div id="contact-tab" class="tab hidden-tab">
                 <h3 data-string="contact" class="tab-title">&nbsp;</h3>
                 <p class="contact-info"><span class="material-icons">mail</span> <a href="mailto:euan.m.campbell@protonmail.com" class="custom-link">euan.m.campbell@protonmail.com</a></p>

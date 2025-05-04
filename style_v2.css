@@ -12,6 +12,22 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
+    background-color: #f9fbfd;
+}
+
+#web-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 8vw;
+    right: 8vw;
+    width: auto; /* Let left and right control the width */
+    padding: 10px;
+    background-color: white;
+    box-shadow: 
+        -6px 0 10px rgba(0, 0, 0, 0.2),  /* left shadow */
+         6px 0 10px rgba(0, 0, 0, 0.2);  /* right shadow */
+    z-index: 0;
 }
 
 #page-head {
@@ -19,7 +35,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 95vw;
+    width: 80vw;
     height: 20vh;
     background-color: white;
     z-index: 2;
@@ -28,8 +44,9 @@ body {
     align-items: flex-start;
     padding: 0;
     border-bottom: 2px solid grey;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 10px;
 }
 
 .head-container {
@@ -80,20 +97,24 @@ body {
 #tab-head {
     position: fixed;
     height: 5vh;
-    width: 95vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     background-color: white;
     z-index: 1;
     display: flex;
     align-items: center;
+    padding: 10px;
+    padding-top: 15px;
 }
 
 #page-content {
-    width: 95vw;
+    width: 80vw;
     position: relative;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    padding: 10px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: white;
 }
 
 #lang-button {
@@ -165,7 +186,7 @@ body {
 
 .active-tab {
     display: block;
-    width: 95vw;
+    width: 89vw;
 }
 
 .active-tab h3 {
@@ -201,8 +222,28 @@ body {
     margin-bottom: 20px;
 }
 
+.tab-subsection-item {
+    margin: 10px;
+}
+
+.tab-subsection-item-head p {
+    display: inline-block;
+    border-bottom: 2px solid grey;
+}
+
+.tab-subsection-item-body {
+    border-left: 2px solid grey;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.tab-subsection-item-body p {
+    display: block;
+    width: fit-content;
+    margin: 0;
+}
+
 .tab-subsection-content {
-    padding-left: 2rem;
     border-left: 2px solid grey;
 }
 
@@ -226,7 +267,7 @@ body {
     top: 15vh; /* The distance from the top of the page */
     z-index: 999; /* Keep it on top of other elements */
     background-color: white;
-    width: 95vw;
+    width: 80vw;
     border-bottom: 2px solid grey;
 }
 
@@ -294,4 +335,6 @@ body {
 
 .block-head {
     cursor: default;
+    border-bottom: 2px solid grey;
 }
+
